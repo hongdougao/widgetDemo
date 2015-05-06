@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - widgetDemo WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Notification - widgetDemo WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>TodayTestWidget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +23,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>widgetDemo WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>widgetDemo.xcscheme</key>
 		<dict>
@@ -28,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>040B93A81AB1298D0028DAAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04389B5E1AF1FFE8003E2407</key>
 		<dict>
 			<key>primary</key>
 			<true/>

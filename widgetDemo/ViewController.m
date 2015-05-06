@@ -18,7 +18,8 @@
 @property (nonatomic,strong)UIView *roundView;
 
 @property (nonatomic,strong)CAShapeLayer * progressLayer;
-
+@property (nonatomic, strong)UIImageView *iamge;
+@property (nonatomic, assign)BOOL imgBool;
 @end
 
 @implementation ViewController
@@ -38,7 +39,62 @@
 //    [self addSteper];
 //    [self addBeizerPath];
 //    [self drawDownBG];
-    [self colorView];
+//    [self colorView];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn addTarget:self action:@selector( changeImage) forControlEvents:UIControlEventTouchUpInside];
+    [btn setBackgroundColor:[UIColor yellowColor]];
+    btn.frame = CGRectMake(80, 80, 80, 60);
+    [self.view addSubview:btn];
+    
+    _iamge = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sns_icon_1"]];
+    _iamge.frame = CGRectMake(80, 180, 100, 100);
+    [self.view addSubview:_iamge];
+    _imgBool = YES;
+    
+  
+}
+void exampleA() {
+    char a = 'A';
+    ^{
+        printf("%c\n", a);
+    }();
+}
+void exampleB_addBlockToArray(NSMutableArray *array) {
+    char b = 'B';
+    [array addObject:^{
+        printf("%c\n", b);
+    }];
+}
+void exampleC_addBlockToArray(NSMutableArray *array) {
+    [array addObject:^{
+        printf("C\n");
+    }];
+}
+
+void exampleC() {
+    NSMutableArray *array = [NSMutableArray array];
+    exampleC_addBlockToArray(array);
+    void (^block)() = [array objectAtIndex:0];
+    block();
+}
+void exampleB() {
+    NSMutableArray *array = [NSMutableArray array];
+    exampleB_addBlockToArray(array);
+    void (^block)() = [array objectAtIndex:0];
+    block();
+}
+-(void)changeImage{
+    if (_imgBool){
+        _iamge.image= nil;
+        _iamge.image =[UIImage imageNamed:@"sns_icon_1"];
+        _imgBool = NO;
+    }else{
+        _iamge.image= nil;
+
+        _iamge.image =[UIImage imageNamed:@"sns_icon_2"];
+        _imgBool = YES;
+    }
+
 }
 -(void)colorView{
     ColorFulView *view= [[ColorFulView alloc ]init];
