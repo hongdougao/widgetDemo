@@ -20,6 +20,7 @@
 		043462731AF9F13100570D6C /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = 043462721AF9F13100570D6C /* MainRowType.m */; };
 		043462761AFA089500570D6C /* MyDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 043462751AFA089500570D6C /* MyDataObject.m */; };
 		043462781AFA0C7B00570D6C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 043462771AFA0C7B00570D6C /* 2.png */; };
+		0434627B1AFA105000570D6C /* ContentInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0434627A1AFA105000570D6C /* ContentInterfaceController.m */; };
 		04389B541AF1FFE8003E2407 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04389B531AF1FFE8003E2407 /* InterfaceController.m */; };
 		04389B571AF1FFE8003E2407 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04389B561AF1FFE8003E2407 /* NotificationController.m */; };
 		04389B5A1AF1FFE8003E2407 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04389B591AF1FFE8003E2407 /* GlanceController.m */; };
@@ -124,6 +125,8 @@
 		043462741AFA089500570D6C /* MyDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataObject.h; sourceTree = "<group>"; };
 		043462751AFA089500570D6C /* MyDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataObject.m; sourceTree = "<group>"; };
 		043462771AFA0C7B00570D6C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = SOURCE_ROOT; };
+		043462791AFA105000570D6C /* ContentInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentInterfaceController.h; sourceTree = "<group>"; };
+		0434627A1AFA105000570D6C /* ContentInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentInterfaceController.m; sourceTree = "<group>"; };
 		04389B4D1AF1FFE7003E2407 /* widgetDemo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "widgetDemo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04389B501AF1FFE8003E2407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04389B511AF1FFE8003E2407 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -255,9 +258,11 @@
 		04389B4E1AF1FFE7003E2407 /* widgetDemo WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				04389B521AF1FFE8003E2407 /* InterfaceController.h */,
 				043462771AFA0C7B00570D6C /* 2.png */,
+				04389B521AF1FFE8003E2407 /* InterfaceController.h */,
 				04389B531AF1FFE8003E2407 /* InterfaceController.m */,
+				043462791AFA105000570D6C /* ContentInterfaceController.h */,
+				0434627A1AFA105000570D6C /* ContentInterfaceController.m */,
 				043462741AFA089500570D6C /* MyDataObject.h */,
 				043462751AFA089500570D6C /* MyDataObject.m */,
 				043462711AF9F13100570D6C /* MainRowType.h */,
@@ -638,6 +643,7 @@
 				04389B571AF1FFE8003E2407 /* NotificationController.m in Sources */,
 				04389B541AF1FFE8003E2407 /* InterfaceController.m in Sources */,
 				043462761AFA089500570D6C /* MyDataObject.m in Sources */,
+				0434627B1AFA105000570D6C /* ContentInterfaceController.m in Sources */,
 				04389B5A1AF1FFE8003E2407 /* GlanceController.m in Sources */,
 				043462731AF9F13100570D6C /* MainRowType.m in Sources */,
 			);

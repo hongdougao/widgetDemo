@@ -9,6 +9,7 @@
 #import "InterfaceController.h"
 #import "MainRowType.h"
 #import "MyDataObject.h"
+#import "ContentInterfaceController.h"
 @interface InterfaceController()
 {
   NSArray *  tbDate;
@@ -46,7 +47,10 @@
     }
     
 }
-
+-(void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex{
+//    ContentInterfaceController *content = [[ContentInterfaceController alloc]init];
+    [self pushControllerWithName:@"ContentInterfaceController" context:nil];
+}
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];

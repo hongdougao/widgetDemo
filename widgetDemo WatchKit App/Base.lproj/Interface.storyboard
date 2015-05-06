@@ -16,11 +16,14 @@
                         <table alignment="left" id="8EB-jI-03y">
                             <items>
                                 <tableRow identifier="MainRowType" id="FNC-1h-9U3" customClass="MainRowType">
-                                    <group key="rootItem" width="1" alignment="left" id="0C4-Hf-YZe">
+                                    <group key="rootItem" width="1" height="97.5" alignment="left" id="0C4-Hf-YZe">
                                         <items>
-                                            <label alignment="left" text="Label" id="R1f-W9-2uL"/>
-                                            <imageView alignment="left" id="FBz-cR-QrI"/>
+                                            <label height="34" alignment="left" text="Label" id="R1f-W9-2uL"/>
+                                            <imageView height="94" alignment="left" id="FBz-cR-QrI"/>
                                         </items>
+                                        <connections>
+                                            <segue destination="xgw-cE-Qmx" kind="push" id="Zcz-lV-IHy"/>
+                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="rowDescription" destination="R1f-W9-2uL" id="aGV-yu-5VI"/>
@@ -37,6 +40,13 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--内容-->
+        <scene sceneID="f6F-6F-gHM">
+            <objects>
+                <controller identifier="ContentInterfaceController" title="内容" id="xgw-cE-Qmx"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="342"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
