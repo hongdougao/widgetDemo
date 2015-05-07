@@ -16,9 +16,9 @@
                         <table alignment="left" id="8EB-jI-03y">
                             <items>
                                 <tableRow identifier="MainRowType" id="FNC-1h-9U3" customClass="MainRowType">
-                                    <group key="rootItem" width="1" height="97.5" alignment="left" id="0C4-Hf-YZe">
+                                    <group key="rootItem" width="1" height="117.5" alignment="left" id="0C4-Hf-YZe">
                                         <items>
-                                            <label height="34" alignment="left" text="Label" id="R1f-W9-2uL"/>
+                                            <label width="39" height="35" alignment="left" text="Label" id="R1f-W9-2uL"/>
                                             <imageView height="94" alignment="left" id="FBz-cR-QrI"/>
                                         </items>
                                         <connections>
@@ -44,9 +44,31 @@
         <!--内容-->
         <scene sceneID="f6F-6F-gHM">
             <objects>
-                <controller identifier="ContentInterfaceController" title="内容" id="xgw-cE-Qmx"/>
+                <controller identifier="ContentInterfaceController" title="内容" id="xgw-cE-Qmx">
+                    <items>
+                        <group width="1" height="55" alignment="left" id="a8j-w2-w3a">
+                            <items>
+                                <label alignment="left" text="Label" id="vNZ-kr-1s1">
+                                    <color key="textColor" red="0.90042702460000001" green="1" blue="0.12910939430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label width="136" height="20" alignment="left" verticalAlignment="bottom" text="Label" id="WRp-hz-W6T">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label alignment="left" text="Label" id="FXj-qj-8Cd"/>
+                        <separator alignment="left" id="miD-RD-sPw"/>
+                        <imageView width="125" height="61" alignment="left" id="D78-5A-2gT"/>
+                        <button width="1" alignment="left" title="Button" id="HXU-af-4Qt">
+                            <connections>
+                                <segue destination="cwt-4a-Ri9" kind="push" id="Upr-2U-uUP"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="440" y="342"/>
+            <point key="canvasLocation" x="440" y="359"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -60,6 +82,44 @@
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--MenuInterfaceController-->
+        <scene sceneID="vBP-Wk-sP6">
+            <objects>
+                <controller identifier="MenuInterfaceController" id="pB1-Rt-j7K" customClass="MenuInterfaceController">
+                    <menu key="menu" id="cTO-1d-unL">
+                        <items>
+                            <menuItem title="跟帖" image="1@3x.png" id="Tg8-MS-HX9">
+                                <connections>
+                                    <action selector="followAction" destination="pB1-Rt-j7K" id="Ich-BT-c8p"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="赞" image="4@3x.png" id="BGF-kJ-hfU">
+                                <connections>
+                                    <action selector="giveMeFiveAction" destination="pB1-Rt-j7K" id="9Nm-FZ-oXT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="评论" image="7@3x.png" id="5vf-xZ-yAV">
+                                <connections>
+                                    <action selector="commentAction" destination="pB1-Rt-j7K" id="m7F-wo-uXe"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="449" y="657"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="GM7-Jk-ewb">
+            <objects>
+                <controller id="cwt-4a-Ri9">
+                    <items>
+                        <map height="131" alignment="left" id="0Gj-Hq-cxw"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="714" y="359"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

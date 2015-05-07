@@ -1,25 +1,35 @@
 //
-//  GlanceController.m
-//  widgetDemo WatchKit Extension
+//  MenuInterfaceController.m
+//  widgetDemo
 //
-//  Created by Yangyue on 15/4/30.
+//  Created by Yangyue on 15/5/7.
 //  Copyright (c) 2015年 mac. All rights reserved.
 //
 
-#import "GlanceController.h"
+#import "MenuInterfaceController.h"
 
-
-@interface GlanceController()
+@interface MenuInterfaceController ()
 
 @end
 
-
-@implementation GlanceController
+@implementation MenuInterfaceController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-
+    
     // Configure interface objects here.
+}
+- (IBAction)followAction {
+    
+    NSLog(@"%s",__FUNCTION__);
+}
+- (IBAction)giveMeFiveAction {
+    NSLog(@"%s",__FUNCTION__);
+
+}
+- (IBAction)commentAction {
+    NSLog(@"%s",__FUNCTION__);
+
 }
 
 - (void)willActivate {
@@ -31,9 +41,7 @@
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
--(void)updateUserActivity:(NSString *)type userInfo:(NSDictionary *)userInfo webpageURL:(NSURL *)webpageURL{
 
-}
 @end
 
 

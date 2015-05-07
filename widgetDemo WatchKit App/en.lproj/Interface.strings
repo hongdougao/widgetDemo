@@ -1,0 +1,33 @@
+
+/* Class = "WKInterfaceMenuItem"; title = "评论"; ObjectID = "5vf-xZ-yAV"; */
+"5vf-xZ-yAV.title" = "评论";
+
+/* Class = "WKInterfaceMenuItem"; title = "赞"; ObjectID = "BGF-kJ-hfU"; */
+"BGF-kJ-hfU.title" = "赞";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "FXj-qj-8Cd"; */
+"FXj-qj-8Cd.text" = "Label";
+
+/* Class = "WKInterfaceButton"; title = "Button"; ObjectID = "HXU-af-4Qt"; */
+"HXU-af-4Qt.title" = "Button";
+
+/* Class = "WKInterfaceLabel"; text = "Hello World!"; ObjectID = "Nyo-eY-Ecy"; */
+"Nyo-eY-Ecy.text" = "Hello World!";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "R1f-W9-2uL"; */
+"R1f-W9-2uL.text" = "Label";
+
+/* Class = "WKInterfaceMenuItem"; title = "跟帖"; ObjectID = "Tg8-MS-HX9"; */
+"Tg8-MS-HX9.title" = "跟帖";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "WRp-hz-W6T"; */
+"WRp-hz-W6T.text" = "Label";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "XkS-y5-khE"; */
+"XkS-y5-khE.text" = "Alert Label";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "vNZ-kr-1s1"; */
+"vNZ-kr-1s1.text" = "Label";
+
+/* Class = "WKInterfaceController"; title = "内容"; ObjectID = "xgw-cE-Qmx"; */
+"xgw-cE-Qmx.title" = "内容";

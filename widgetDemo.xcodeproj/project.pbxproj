@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04030B1C1AFAF1F60076D103 /* 1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04030B151AFAF1F60076D103 /* 1@3x.png */; };
+		04030B1D1AFAF1F60076D103 /* 2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04030B161AFAF1F60076D103 /* 2@3x.png */; };
+		04030B1E1AFAF1F60076D103 /* 3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04030B171AFAF1F60076D103 /* 3@3x.png */; };
+		04030B1F1AFAF1F60076D103 /* 4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04030B181AFAF1F60076D103 /* 4@3x.png */; };
+		04030B201AFAF1F60076D103 /* 5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04030B191AFAF1F60076D103 /* 5@3x.png */; };
+		04030B211AFAF1F60076D103 /* 6@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04030B1A1AFAF1F60076D103 /* 6@3x.png */; };
+		04030B221AFAF1F60076D103 /* 7@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04030B1B1AFAF1F60076D103 /* 7@3x.png */; };
+		04030B251AFAF29B0076D103 /* MenuInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04030B241AFAF29B0076D103 /* MenuInterfaceController.m */; };
 		040B93991AB11D5F0028DAAE /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B93981AB11D5F0028DAAE /* ActionViewController.m */; };
 		040B939B1AB11D5F0028DAAE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040B939A1AB11D5F0028DAAE /* MainInterface.storyboard */; };
 		040B939E1AB11D5F0028DAAE /* testWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 040B93931AB11D5F0028DAAE /* testWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -19,7 +27,6 @@
 		04273C481AC395F000A5C259 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04273C471AC395F000A5C259 /* UIColor+HexColor.m */; };
 		043462731AF9F13100570D6C /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = 043462721AF9F13100570D6C /* MainRowType.m */; };
 		043462761AFA089500570D6C /* MyDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 043462751AFA089500570D6C /* MyDataObject.m */; };
-		043462781AFA0C7B00570D6C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 043462771AFA0C7B00570D6C /* 2.png */; };
 		0434627B1AFA105000570D6C /* ContentInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0434627A1AFA105000570D6C /* ContentInterfaceController.m */; };
 		04389B541AF1FFE8003E2407 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04389B531AF1FFE8003E2407 /* InterfaceController.m */; };
 		04389B571AF1FFE8003E2407 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04389B561AF1FFE8003E2407 /* NotificationController.m */; };
@@ -105,6 +112,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04030B151AFAF1F60076D103 /* 1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@3x.png"; sourceTree = "<group>"; };
+		04030B161AFAF1F60076D103 /* 2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@3x.png"; sourceTree = "<group>"; };
+		04030B171AFAF1F60076D103 /* 3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@3x.png"; sourceTree = "<group>"; };
+		04030B181AFAF1F60076D103 /* 4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@3x.png"; sourceTree = "<group>"; };
+		04030B191AFAF1F60076D103 /* 5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5@3x.png"; sourceTree = "<group>"; };
+		04030B1A1AFAF1F60076D103 /* 6@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6@3x.png"; sourceTree = "<group>"; };
+		04030B1B1AFAF1F60076D103 /* 7@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7@3x.png"; sourceTree = "<group>"; };
+		04030B231AFAF29B0076D103 /* MenuInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuInterfaceController.h; sourceTree = "<group>"; };
+		04030B241AFAF29B0076D103 /* MenuInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuInterfaceController.m; sourceTree = "<group>"; };
 		040B93931AB11D5F0028DAAE /* testWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = testWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		040B93961AB11D5F0028DAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		040B93971AB11D5F0028DAAE /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
@@ -124,7 +140,6 @@
 		043462721AF9F13100570D6C /* MainRowType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainRowType.m; sourceTree = "<group>"; };
 		043462741AFA089500570D6C /* MyDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataObject.h; sourceTree = "<group>"; };
 		043462751AFA089500570D6C /* MyDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataObject.m; sourceTree = "<group>"; };
-		043462771AFA0C7B00570D6C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = SOURCE_ROOT; };
 		043462791AFA105000570D6C /* ContentInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentInterfaceController.h; sourceTree = "<group>"; };
 		0434627A1AFA105000570D6C /* ContentInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentInterfaceController.m; sourceTree = "<group>"; };
 		04389B4D1AF1FFE7003E2407 /* widgetDemo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "widgetDemo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +231,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04030B141AFAF1F60076D103 /* ICON */ = {
+			isa = PBXGroup;
+			children = (
+				04030B151AFAF1F60076D103 /* 1@3x.png */,
+				04030B161AFAF1F60076D103 /* 2@3x.png */,
+				04030B171AFAF1F60076D103 /* 3@3x.png */,
+				04030B181AFAF1F60076D103 /* 4@3x.png */,
+				04030B191AFAF1F60076D103 /* 5@3x.png */,
+				04030B1A1AFAF1F60076D103 /* 6@3x.png */,
+				04030B1B1AFAF1F60076D103 /* 7@3x.png */,
+			);
+			path = ICON;
+			sourceTree = "<group>";
+		};
 		040B93941AB11D5F0028DAAE /* testWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,11 +287,13 @@
 		04389B4E1AF1FFE7003E2407 /* widgetDemo WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				043462771AFA0C7B00570D6C /* 2.png */,
+				04030B141AFAF1F60076D103 /* ICON */,
 				04389B521AF1FFE8003E2407 /* InterfaceController.h */,
 				04389B531AF1FFE8003E2407 /* InterfaceController.m */,
 				043462791AFA105000570D6C /* ContentInterfaceController.h */,
 				0434627A1AFA105000570D6C /* ContentInterfaceController.m */,
+				04030B231AFAF29B0076D103 /* MenuInterfaceController.h */,
+				04030B241AFAF29B0076D103 /* MenuInterfaceController.m */,
 				043462741AFA089500570D6C /* MyDataObject.h */,
 				043462751AFA089500570D6C /* MyDataObject.m */,
 				043462711AF9F13100570D6C /* MainRowType.h */,
@@ -581,9 +612,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04030B221AFAF1F60076D103 /* 7@3x.png in Resources */,
+				04030B1F1AFAF1F60076D103 /* 4@3x.png in Resources */,
+				04030B1D1AFAF1F60076D103 /* 2@3x.png in Resources */,
+				04030B1C1AFAF1F60076D103 /* 1@3x.png in Resources */,
+				04030B201AFAF1F60076D103 /* 5@3x.png in Resources */,
+				04030B211AFAF1F60076D103 /* 6@3x.png in Resources */,
+				04030B1E1AFAF1F60076D103 /* 3@3x.png in Resources */,
 				04389B5C1AF1FFE8003E2407 /* Images.xcassets in Resources */,
 				04389B601AF1FFE8003E2407 /* widgetDemo WatchKit App.app in Resources */,
-				043462781AFA0C7B00570D6C /* 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +681,7 @@
 				04389B541AF1FFE8003E2407 /* InterfaceController.m in Sources */,
 				043462761AFA089500570D6C /* MyDataObject.m in Sources */,
 				0434627B1AFA105000570D6C /* ContentInterfaceController.m in Sources */,
+				04030B251AFAF29B0076D103 /* MenuInterfaceController.m in Sources */,
 				04389B5A1AF1FFE8003E2407 /* GlanceController.m in Sources */,
 				043462731AF9F13100570D6C /* MainRowType.m in Sources */,
 			);
