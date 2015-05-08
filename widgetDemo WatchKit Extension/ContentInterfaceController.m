@@ -19,8 +19,12 @@
     
     // Configure interface objects here.
     NSLog(@"conten Show");
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showMenuController)];
+    [self addMenuItemWithImage:[UIImage imageNamed:@"1@3x"] title:@"文章" action:@selector(showMenuController)];
 }
-
+-(void)showMenuController{
+    [self pushControllerWithName:@"MenuInterfaceController" context:nil];
+}
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];

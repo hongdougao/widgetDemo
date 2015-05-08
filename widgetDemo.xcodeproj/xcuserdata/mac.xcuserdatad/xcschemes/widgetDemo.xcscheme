@@ -58,15 +58,27 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/widgetDemo">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "04940DB71AB118ED008B7241"
-            BuildableName = "widgetDemo.app"
-            BlueprintName = "widgetDemo"
+            BlueprintIdentifier = "04389B5E1AF1FFE8003E2407"
+            BuildableName = "widgetDemo WatchKit App.app"
+            BlueprintName = "widgetDemo WatchKit App"
             ReferencedContainer = "container:widgetDemo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "04389B5E1AF1FFE8003E2407"
+            BuildableName = "widgetDemo WatchKit App.app"
+            BlueprintName = "widgetDemo WatchKit App"
+            ReferencedContainer = "container:widgetDemo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -76,7 +88,8 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04940DB71AB118ED008B7241"

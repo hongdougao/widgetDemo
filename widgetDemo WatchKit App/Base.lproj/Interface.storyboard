@@ -44,7 +44,7 @@
         <!--内容-->
         <scene sceneID="f6F-6F-gHM">
             <objects>
-                <controller identifier="ContentInterfaceController" title="内容" id="xgw-cE-Qmx">
+                <controller identifier="ContentInterfaceController" title="内容" id="xgw-cE-Qmx" customClass="ContentInterfaceController">
                     <items>
                         <group width="1" height="55" alignment="left" id="a8j-w2-w3a">
                             <items>
@@ -62,10 +62,13 @@
                         <imageView width="125" height="61" alignment="left" id="D78-5A-2gT"/>
                         <button width="1" alignment="left" title="Button" id="HXU-af-4Qt">
                             <connections>
-                                <segue destination="cwt-4a-Ri9" kind="push" id="Upr-2U-uUP"/>
+                                <segue destination="cwt-4a-Ri9" kind="modal" id="Upr-2U-uUP"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <segue destination="pB1-Rt-j7K" kind="relationship" relationship="nextPage" id="4fb-YR-KoQ"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="440" y="359"/>
@@ -75,8 +78,16 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="glance" id="kQR-Op-UaW"/>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <imageView alignment="left" image="1@3x.png" id="Sn0-yk-GaC"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
@@ -108,7 +119,7 @@
                     </menu>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="449" y="657"/>
+            <point key="canvasLocation" x="613" y="628"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="GM7-Jk-ewb">

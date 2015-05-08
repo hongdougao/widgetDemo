@@ -51,8 +51,7 @@
     [self.view addSubview:_iamge];
     _imgBool = YES;
     
-  
-}
+ }
 void exampleA() {
     char a = 'A';
     ^{

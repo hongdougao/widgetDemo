@@ -41,7 +41,7 @@
 
         [type.rowDescription setText: tbDate[i]];
 
-        [type.rowIcon setImage:[UIImage imageNamed:@"2"]] ;
+        [type.rowIcon setImage:[UIImage imageNamed: [NSString stringWithFormat:@"%d@3x.png",i+1 ]]] ;
         
         
     }
