@@ -18,6 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UILabel *lbl = [[UILabel  alloc]init];
+    lbl.text = @"啦啦啦啦啦啦啦啦";
+    lbl.frame = CGRectMake(20, 20, 100, 20);
+    [self.view addSubview:lbl];
     // Do any additional setup after loading the view from its nib.
     self.tb.delegate = self;
     self.tb.dataSource = self;
