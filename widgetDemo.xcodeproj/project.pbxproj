@@ -37,6 +37,7 @@
 		04389B6A1AF1FFE8003E2407 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04389B691AF1FFE8003E2407 /* Images.xcassets */; };
 		04389B6D1AF1FFE8003E2407 /* widgetDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04389B4D1AF1FFE7003E2407 /* widgetDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		046FF4AF1AC8DDEB00BE4CF3 /* ColorFulView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046FF4AE1AC8DDEB00BE4CF3 /* ColorFulView.m */; };
+		047684841AFCB043003D17EB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040B93B21AB1298E0028DAAE /* MainInterface.storyboard */; };
 		04940DBC1AB118ED008B7241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04940DBB1AB118ED008B7241 /* Foundation.framework */; };
 		04940DBE1AB118ED008B7241 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04940DBD1AB118ED008B7241 /* CoreGraphics.framework */; };
 		04940DC01AB118ED008B7241 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04940DBF1AB118ED008B7241 /* UIKit.framework */; };
@@ -637,6 +638,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047684841AFCB043003D17EB /* MainInterface.storyboard in Resources */,
 				04940DD21AB118ED008B7241 /* Main_iPad.storyboard in Resources */,
 				04940DD71AB118ED008B7241 /* Images.xcassets in Resources */,
 				04E819991AF856AF00595379 /* sns_icon_2.png in Resources */,
