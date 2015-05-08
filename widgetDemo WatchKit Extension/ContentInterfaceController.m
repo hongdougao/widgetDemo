@@ -19,8 +19,10 @@
     
     // Configure interface objects here.
     NSLog(@"conten Show");
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showMenuController)];
-    [self addMenuItemWithImage:[UIImage imageNamed:@"1@3x"] title:@"文章" action:@selector(showMenuController)];
+     [self addMenuItemWithImage:[UIImage imageNamed:@"1@3x.png"] title:@"文章" action:@selector(showMenuController)];
+    [self addMenuItemWithImage:[UIImage imageNamed:@"2@3x.png"] title:@"标题" action:@selector(showMenuController)];
+    [self addMenuItemWithImage:[UIImage imageNamed:@"3@3x.png"] title:@"新浪" action:@selector(showMenuController)];
+
 }
 -(void)showMenuController{
     [self pushControllerWithName:@"MenuInterfaceController" context:nil];
