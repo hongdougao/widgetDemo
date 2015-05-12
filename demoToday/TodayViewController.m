@@ -12,6 +12,9 @@
 @interface TodayViewController () <NCWidgetProviding,UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tb;
 @property (nonatomic,strong)TodayTableViewCell *nibCell;
+
+@property (weak, nonatomic) IBOutlet UILabel *lbl;
+
 @end
 
 @implementation TodayViewController
@@ -34,6 +37,8 @@
     self.tb.frame=CGRectMake(0, 0, self.view.bounds.size.width, 100);
     self.tb.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +52,11 @@
     // If an error is encountered, use NCUpdateResultFailed
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
-
+    NSUserDefaults *userDefault = [[NSUserDefaults alloc]initWithSuiteName:@"group.com.testDemoContainer"];
+    NSString *stringForName = [userDefault objectForKey:@"testDemoContainer"];
+    if (stringForName) {
+        [_lbl setText:stringForName];
+    }
     completionHandler(NCUpdateResultNewData);
 }
 // 一般默认的View是从图标的右边开始的...如果你想变换,就要实现这个方法
@@ -81,15 +90,15 @@
 
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if (indexPath.row == 0) {
-//        [self.extensionContext openURL:[NSURL URLWithString:@"todayWidgetIOS://action=GotoHomePage"] completionHandler:^(BOOL success) {
-//            NSLog(@"open url result:%d",success);
-//        }];
-//    }else{
+    if (indexPath.row == 0) {
+        [self.extensionContext openURL:[NSURL URLWithString:@"todayWidgetIOS://action=GotoHomePage"] completionHandler:^(BOOL success) {
+            NSLog(@"open url result:%d",success);
+        }];
+    }else{
         [self.extensionContext openURL:[NSURL URLWithString:@"todayWidgetIOS://action=GotoOtherPage"] completionHandler:^(BOOL success) {
             NSLog(@"open url result:%d",success);
         }];
-//    }
+    }
 
 }
 @end

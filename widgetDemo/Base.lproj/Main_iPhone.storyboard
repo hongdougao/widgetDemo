@@ -35,10 +35,20 @@
                     <view key="view" contentMode="scaleToFill" id="WZc-hz-yAn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6O-ZH-khF">
+                                <rect key="frame" x="83" y="284" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="0.32908111569999998" green="1" blue="0.63552928330000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="L5P-ZF-v6x"/>
                     <navigationItem key="navigationItem" id="VHZ-k6-vfP"/>
+                    <connections>
+                        <outlet property="textField" destination="I6O-ZH-khF" id="GJq-SW-g3V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaU-Eb-pdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,6 +117,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1yG-Hi-JN9"/>
+        <segue reference="3QD-WA-1bL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -69,6 +69,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="180"/>
                     <connections>
+                        <outlet property="lbl" destination="GcN-lo-r42" id="Ckk-X3-YPy"/>
                         <outlet property="tb" destination="TWb-Ho-uxs" id="2y2-Ps-OMr"/>
                     </connections>
                 </viewController>

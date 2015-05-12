@@ -14,13 +14,16 @@
 #import "UIColor+HexColor.h"
 #import "BeizierPathView.h"
 #import "NextViewController.h"
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong)CAShapeLayer *trackLayer;
 @property (nonatomic,strong)UIView *roundView;
 
 @property (nonatomic,strong)CAShapeLayer * progressLayer;
 @property (nonatomic, strong)UIImageView *iamge;
 @property (nonatomic, assign)BOOL imgBool;
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 @end
 
 @implementation ViewController
@@ -52,8 +55,24 @@
     [self.view addSubview:_iamge];
     _imgBool = YES;
     
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn2 addTarget:self action:@selector( saveTextByNSUserDefaults) forControlEvents:UIControlEventTouchUpInside];
+    [btn2 setBackgroundColor:[UIColor redColor]];
+    btn2.frame = CGRectMake(180,  80, 80, 60);
+    [self.view addSubview:btn2];
+    
  }
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    [self saveTextByNSUserDefaults];
 
+}
+- (void)saveTextByNSUserDefaults
+{
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.testDemoContainer"];
+    
+    [shared setObject:_textField.text forKey:@"testDemoContainer"];
+    [shared synchronize];
+}
 -(void)changeImage{
     if (_imgBool){
         _iamge.image= nil;
