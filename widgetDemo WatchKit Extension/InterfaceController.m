@@ -29,8 +29,20 @@
     [_titleLbl setText:@"hello world!"];
     tbDate = @[@"h",@"e",@"l",@"l",@"0" ];
     [self creatTB];
+    
+    
+    NSString *stringForName = [self readDataFromNSUserDefaults];
+    if (stringForName) {
+        [_titleLbl setText:stringForName];
+    }
 }
-
+- (NSString *)readDataFromNSUserDefaults
+{
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.testDemoContainer"];
+    NSString *value = [shared valueForKey:@"testDemoContainer"];
+    
+    return value;
+}
 
 -(void)creatTB{
     [_tb setNumberOfRows:tbDate.count withRowType:@"MainRowType"];

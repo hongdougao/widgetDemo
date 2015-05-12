@@ -37,7 +37,11 @@
     self.tb.frame=CGRectMake(0, 0, self.view.bounds.size.width, 100);
     self.tb.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    
+    NSUserDefaults *userDefault = [[NSUserDefaults alloc]initWithSuiteName:@"group.com.testDemoContainer"];
+    NSString *stringForName = [userDefault objectForKey:@"testDemoContainer"];
+    if (stringForName) {
+        [_lbl setText:stringForName];
+    }
 
 }
 
