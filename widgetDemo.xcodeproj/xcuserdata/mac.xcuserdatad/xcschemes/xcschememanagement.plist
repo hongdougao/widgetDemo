@@ -16,13 +16,29 @@
 		</dict>
 		<key>TodayTestWidget.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>testWidget.xcscheme</key>
+		<key>demoToday.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>testWidget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>todayForWidget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>widgetDemo WatchKit App.xcscheme</key>
 		<dict>
@@ -57,12 +73,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0479FC271B00841F00FE41E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>04940DB71AB118ED008B7241</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>04940DDB1AB118ED008B7241</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04DCC9991B018B0800F3F157</key>
 		<dict>
 			<key>primary</key>
 			<true/>
