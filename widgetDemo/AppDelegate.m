@@ -7,22 +7,38 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NextViewController.h"
+#import "ViewController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    NSString *title = @"新常态下 提质增效升级（代表委员议国是）";
-    CGSize  titlePreSize =CGSizeMake(320 - 20, 1000);
-    UIFont * titleFont =[UIFont fontWithName:@"LTHYSZK" size:17];
-//    CGSize  titleSize = [title sizeWithFont: titleFont constrainedToSize:titlePreSize  lineBreakMode:NSLineBreakByWordWrapping];
-// CGSize   titleSize = [title sizeWithFont:titleFont constrainedToSize:titlePreSize lineBreakMode:NSLineBreakByWordWrapping];
-//
-//    NSLog(@"title size :%@",titleSize);
+//    NextViewController *next = [[NextViewController alloc]init ];
+//     UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"storyNav"]; 
+//    [nav pushViewController:next animated:YES];
+//    UITabBarController *vc = (UITabBarController*)self.window.rootViewController;
+//    vc.selectedIndex = 1;
     return YES;
 }
-							
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSString* prefix = @"todayWidgetIOS://action=";
+    if ([[url absoluteString] rangeOfString:prefix].location != NSNotFound) {
+        NSString* action = [[url absoluteString] substringFromIndex:prefix.length];
+        if ([action isEqualToString:@"GotoHomePage"]) {
+            
+        }
+        else if([action isEqualToString:@"GotoOtherPage"]) {
+//            NextViewController *next = [[NextViewController alloc]init ];
+//             UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"storyNav"];
+            UITabBarController *vc = (UITabBarController*)self.window.rootViewController;
+            vc.selectedIndex = 1;
+        }
+    }
+    
+    return  YES;
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

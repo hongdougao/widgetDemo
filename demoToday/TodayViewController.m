@@ -29,11 +29,10 @@
  
     // 调整高度,根据数组的值来确定Cell的个数，从而确定视图的高度
     self.preferredContentSize = CGSizeMake(self.view.bounds.size.width,180 );
-    
     self.tb.delegate = self;
     self.tb.dataSource = self;
     self.tb.frame=CGRectMake(0, 0, self.view.bounds.size.width, 100);
-    
+    self.tb.separatorStyle = UITableViewCellSeparatorStyleNone;
     
 }
 
@@ -79,6 +78,18 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.row == 0) {
+//        [self.extensionContext openURL:[NSURL URLWithString:@"todayWidgetIOS://action=GotoHomePage"] completionHandler:^(BOOL success) {
+//            NSLog(@"open url result:%d",success);
+//        }];
+//    }else{
+        [self.extensionContext openURL:[NSURL URLWithString:@"todayWidgetIOS://action=GotoOtherPage"] completionHandler:^(BOOL success) {
+            NSLog(@"open url result:%d",success);
+        }];
+//    }
 
 }
 @end

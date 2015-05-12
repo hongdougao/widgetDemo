@@ -13,6 +13,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "UIColor+HexColor.h"
 #import "BeizierPathView.h"
+#import "NextViewController.h"
 @interface ViewController ()
 @property (nonatomic,strong)CAShapeLayer *trackLayer;
 @property (nonatomic,strong)UIView *roundView;
@@ -52,36 +53,7 @@
     _imgBool = YES;
     
  }
-void exampleA() {
-    char a = 'A';
-    ^{
-        printf("%c\n", a);
-    }();
-}
-void exampleB_addBlockToArray(NSMutableArray *array) {
-    char b = 'B';
-    [array addObject:^{
-        printf("%c\n", b);
-    }];
-}
-void exampleC_addBlockToArray(NSMutableArray *array) {
-    [array addObject:^{
-        printf("C\n");
-    }];
-}
 
-void exampleC() {
-    NSMutableArray *array = [NSMutableArray array];
-    exampleC_addBlockToArray(array);
-    void (^block)() = [array objectAtIndex:0];
-    block();
-}
-void exampleB() {
-    NSMutableArray *array = [NSMutableArray array];
-    exampleB_addBlockToArray(array);
-    void (^block)() = [array objectAtIndex:0];
-    block();
-}
 -(void)changeImage{
     if (_imgBool){
         _iamge.image= nil;
@@ -93,7 +65,9 @@ void exampleB() {
         _iamge.image =[UIImage imageNamed:@"sns_icon_2"];
         _imgBool = YES;
     }
-
+    NextViewController *next = [[NextViewController alloc]init ];
+    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"storyNav"];
+    [nav pushViewController:next animated:YES];
 }
 -(void)colorView{
     ColorFulView *view= [[ColorFulView alloc ]init];

@@ -49,6 +49,7 @@
 		04DCC9A31B018B0800F3F157 /* MainInterface_today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DCC9A21B018B0800F3F157 /* MainInterface_today.storyboard */; };
 		04DCC9A61B018B0800F3F157 /* demoToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04DCC99A1B018B0800F3F157 /* demoToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04DCC9AC1B0194D600F3F157 /* TodayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCC9AB1B0194D600F3F157 /* TodayTableViewCell.m */; };
+		04DCC9AF1B01C82F00F3F157 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCC9AE1B01C82F00F3F157 /* NextViewController.m */; };
 		04E819981AF856AF00595379 /* sns_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E819961AF856AF00595379 /* sns_icon_1.png */; };
 		04E819991AF856AF00595379 /* sns_icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E819971AF856AF00595379 /* sns_icon_2.png */; };
 /* End PBXBuildFile section */
@@ -165,6 +166,9 @@
 		04DCC9A21B018B0800F3F157 /* MainInterface_today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface_today.storyboard; sourceTree = "<group>"; };
 		04DCC9AA1B0194D600F3F157 /* TodayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayTableViewCell.h; sourceTree = "<group>"; };
 		04DCC9AB1B0194D600F3F157 /* TodayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayTableViewCell.m; sourceTree = "<group>"; };
+		04DCC9AD1B01C82F00F3F157 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		04DCC9AE1B01C82F00F3F157 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		04DCC9B01B01DDFB00F3F157 /* demoToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = demoToday.entitlements; sourceTree = "<group>"; };
 		04E819961AF856AF00595379 /* sns_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_1.png; sourceTree = SOURCE_ROOT; };
 		04E819971AF856AF00595379 /* sns_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sns_icon_2.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -320,6 +324,8 @@
 				04940DD01AB118ED008B7241 /* Main_iPad.storyboard */,
 				04940DD31AB118ED008B7241 /* ViewController.h */,
 				04940DD41AB118ED008B7241 /* ViewController.m */,
+				04DCC9AD1B01C82F00F3F157 /* NextViewController.h */,
+				04DCC9AE1B01C82F00F3F157 /* NextViewController.m */,
 				046FF4AD1AC8DDEB00BE4CF3 /* ColorFulView.h */,
 				046FF4AE1AC8DDEB00BE4CF3 /* ColorFulView.m */,
 				04273C461AC395F000A5C259 /* UIColor+HexColor.h */,
@@ -367,6 +373,7 @@
 		04DCC99C1B018B0800F3F157 /* demoToday */ = {
 			isa = PBXGroup;
 			children = (
+				04DCC9B01B01DDFB00F3F157 /* demoToday.entitlements */,
 				04DCC99F1B018B0800F3F157 /* TodayViewController.h */,
 				04DCC9A01B018B0800F3F157 /* TodayViewController.m */,
 				04DCC9A21B018B0800F3F157 /* MainInterface_today.storyboard */,
@@ -501,6 +508,11 @@
 					04DCC9991B018B0800F3F157 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = YU2XLP2S95;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -606,6 +618,7 @@
 				04273C481AC395F000A5C259 /* UIColor+HexColor.m in Sources */,
 				04D29B6C1ACA3DE0008459B3 /* BeizierPathView.m in Sources */,
 				04940DCC1AB118ED008B7241 /* AppDelegate.m in Sources */,
+				04DCC9AF1B01C82F00F3F157 /* NextViewController.m in Sources */,
 				046FF4AF1AC8DDEB00BE4CF3 /* ColorFulView.m in Sources */,
 				04940DC81AB118ED008B7241 /* main.m in Sources */,
 			);
@@ -923,7 +936,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = demoToday/demoToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -936,6 +951,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -944,7 +960,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = demoToday/demoToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -954,6 +972,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
