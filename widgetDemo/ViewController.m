@@ -37,6 +37,12 @@
 {
     [super viewDidLoad];
     [self.view addSubview:self.roundView];
+    
+    
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.testDemoContainer"];
+    
+    [shared setObject:@"testDemoContainer" forKey:@"testDemoContainer"];
+    [shared synchronize];
 //     [self addColor];
 //    [self fullFilledBezierPath];
 //    [self grayCircle];
