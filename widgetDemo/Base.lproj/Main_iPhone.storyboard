@@ -8,7 +8,7 @@
         <!--Item 2-->
         <scene sceneID="ZYa-ST-C3K">
             <objects>
-                <viewController id="Ruw-tX-b7F" sceneMemberID="viewController">
+                <viewController id="Ruw-tX-b7F" customClass="NextViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TSa-WH-3uq"/>
                         <viewControllerLayoutGuide type="bottom" id="IOv-7X-pmC"/>
@@ -16,6 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="7ed-gY-gEp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKS-hk-cs9">
+                                <rect key="frame" x="69" y="140" width="137" height="25"/>
+                                <color key="backgroundColor" red="0.78823529410000004" green="0.78823529410000004" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="hide widget">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideAction:" destination="Ruw-tX-b7F" eventType="touchUpInside" id="wk2-6T-itb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1C-De-RBr">
+                                <rect key="frame" x="69" y="209" width="137" height="25"/>
+                                <color key="backgroundColor" red="0.78823529410000004" green="0.78823529410000004" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="show widget">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAction:" destination="Ruw-tX-b7F" eventType="touchUpInside" id="fND-43-ZjR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.41496800020000002" blue="0.38429271110000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="qfp-kD-wLn"/>
@@ -24,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="-27" y="518"/>
         </scene>
-        <!--Item 1-->
+        <!--Item-->
         <scene sceneID="o0I-zo-4sQ">
             <objects>
                 <viewController id="AdP-IF-OgU" customClass="ViewController" sceneMemberID="viewController">
@@ -44,8 +66,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.32908111569999998" green="1" blue="0.63552928330000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="L5P-ZF-v6x"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="pwS-ek-SAa"/>
                     <navigationItem key="navigationItem" id="VHZ-k6-vfP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="textField" destination="I6O-ZH-khF" id="GJq-SW-g3V"/>
                     </connections>
@@ -67,17 +90,17 @@
                     <connections>
                         <segue destination="AdP-IF-OgU" kind="relationship" relationship="viewControllers" id="1yG-Hi-JN9"/>
                         <segue destination="Ruw-tX-b7F" kind="relationship" relationship="viewControllers" id="DMz-0O-6jO"/>
-                        <segue destination="YMg-lJ-gbO" kind="relationship" relationship="viewControllers" id="r9P-wh-caI"/>
+                        <segue destination="YMg-lJ-gbO" kind="relationship" relationship="viewControllers" id="Ngj-aq-eoz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Du-sA-GPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-567" y="203"/>
         </scene>
-        <!--Item-->
+        <!--Item3-->
         <scene sceneID="ii4-80-u8B">
             <objects>
-                <viewController id="YMg-lJ-gbO" sceneMemberID="viewController">
+                <viewController id="YMg-lJ-gbO" userLabel="Item3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cWJ-Qa-RDu"/>
                         <viewControllerLayoutGuide type="bottom" id="dxh-Ee-aw5"/>
@@ -94,29 +117,10 @@
             </objects>
             <point key="canvasLocation" x="-350" y="939"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="0b6-aZ-xeh">
-            <objects>
-                <navigationController storyboardIdentifier="storyNav" id="oHk-RZ-vpB" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tBi-qc-LQi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="AdP-IF-OgU" kind="relationship" relationship="rootViewController" id="3QD-WA-1bL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JMX-cq-6Ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-443" y="-487"/>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="3QD-WA-1bL"/>
-    </inferredMetricsTieBreakers>
 </document>

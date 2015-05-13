@@ -5,7 +5,7 @@
 //  Created by Yangyue on 15/5/12.
 //  Copyright (c) 2015年 mac. All rights reserved.
 //
-
+#define k_APP_GROUP_KEY @"group.com.testDemoContainer"
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import "TodayTableViewCell.h"
@@ -37,7 +37,7 @@
     self.tb.frame=CGRectMake(0, 0, self.view.bounds.size.width, 100);
     self.tb.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    NSUserDefaults *userDefault = [[NSUserDefaults alloc]initWithSuiteName:@"group.com.testDemoContainer"];
+    NSUserDefaults *userDefault = [[NSUserDefaults alloc]initWithSuiteName:k_APP_GROUP_KEY];
     NSString *stringForName = [userDefault objectForKey:@"testDemoContainer"];
     if (stringForName) {
         [_lbl setText:stringForName];
@@ -57,7 +57,7 @@
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
     NSUserDefaults *userDefault = [[NSUserDefaults alloc]initWithSuiteName:@"group.com.testDemoContainer"];
-    NSString *stringForName = [userDefault objectForKey:@"testDemoContainer"];
+    NSString *stringForName = [userDefault valueForKey:@"testDemoContainer"];
     if (stringForName) {
         [_lbl setText:stringForName];
     }
@@ -95,6 +95,8 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
+        //extension和host app之间可以通过extensionContext属性直接通信，该属性是新增加的UIViewController类别：
+
         [self.extensionContext openURL:[NSURL URLWithString:@"todayWidgetIOS://action=GotoHomePage"] completionHandler:^(BOOL success) {
             NSLog(@"open url result:%d",success);
         }];

@@ -77,7 +77,7 @@
 {
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.testDemoContainer"];
     
-    [shared setObject:_textField.text forKey:@"testDemoContainer"];
+    [shared setValue:_textField.text forKey:@"testDemoContainer"];
     [shared synchronize];
 }
 -(void)changeImage{
@@ -91,9 +91,9 @@
         _iamge.image =[UIImage imageNamed:@"sns_icon_2"];
         _imgBool = YES;
     }
-    NextViewController *next = [[NextViewController alloc]init ];
-    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"storyNav"];
-    [nav pushViewController:next animated:YES];
+//    NextViewController *next = [[NextViewController alloc]init ];
+//    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"storyNav"];
+//    [nav pushViewController:next animated:YES];
 }
 -(void)colorView{
     ColorFulView *view= [[ColorFulView alloc ]init];

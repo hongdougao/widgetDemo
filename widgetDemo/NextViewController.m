@@ -7,6 +7,8 @@
 //
 
 #import "NextViewController.h"
+#define k_APP_WIDGET_EXTENSION_KEY @"com.apple.widget-extension"
+#import <NotificationCenter/NotificationCenter.h>
 
 @interface NextViewController ()
 
@@ -24,6 +26,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+////隐藏插件
+- (IBAction)hideAction:(id)sender {
+    [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:k_APP_WIDGET_EXTENSION_KEY];
+
+}
+////让隐藏的插件重新显示
+- (IBAction)showAction:(id)sender {
+    [[NCWidgetController widgetController] setHasContent:YES forWidgetWithBundleIdentifier:k_APP_WIDGET_EXTENSION_KEY];
+
+}
+
 
 /*
 #pragma mark - Navigation

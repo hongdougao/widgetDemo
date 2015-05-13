@@ -157,6 +157,7 @@
 		04940DE51AB118ED008B7241 /* widgetDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "widgetDemoTests-Info.plist"; sourceTree = "<group>"; };
 		04940DE71AB118ED008B7241 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04940DE91AB118ED008B7241 /* widgetDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = widgetDemoTests.m; sourceTree = "<group>"; };
+		049A2F111B02D89B00C4B967 /* widgetDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = widgetDemo.entitlements; sourceTree = "<group>"; };
 		04D29B6A1ACA3DE0008459B3 /* BeizierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeizierPathView.h; sourceTree = "<group>"; };
 		04D29B6B1ACA3DE0008459B3 /* BeizierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeizierPathView.m; sourceTree = "<group>"; };
 		04DCC99A1B018B0800F3F157 /* demoToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = demoToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,6 +319,7 @@
 		04940DC11AB118ED008B7241 /* widgetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				049A2F111B02D89B00C4B967 /* widgetDemo.entitlements */,
 				04940DCA1AB118ED008B7241 /* AppDelegate.h */,
 				04940DCB1AB118ED008B7241 /* AppDelegate.m */,
 				04940DCD1AB118ED008B7241 /* Main_iPhone.storyboard */,
@@ -502,6 +504,11 @@
 					};
 					04940DB71AB118ED008B7241 = {
 						DevelopmentTeam = YU2XLP2S95;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					04940DDB1AB118ED008B7241 = {
 						TestTargetID = 04940DB71AB118ED008B7241;
@@ -884,8 +891,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = widgetDemo/widgetDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ziyao zhang (WA2KSG629W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "widgetDemo/widgetDemo-Prefix.pch";
 				INFOPLIST_FILE = "widgetDemo/widgetDemo-Info.plist";
@@ -900,8 +908,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = widgetDemo/widgetDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ziyao zhang (WA2KSG629W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "widgetDemo/widgetDemo-Prefix.pch";
 				INFOPLIST_FILE = "widgetDemo/widgetDemo-Info.plist";
@@ -1051,6 +1060,7 @@
 				04DCC9A91B018B0800F3F157 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

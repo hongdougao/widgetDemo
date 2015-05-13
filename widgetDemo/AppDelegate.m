@@ -10,6 +10,7 @@
 #import "NextViewController.h"
 #import "ViewController.h"
 @implementation AppDelegate
+#define k_APP_GROUP_KEY @"group.com.testDemoContainer"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,6 +20,12 @@
 //    [nav pushViewController:next animated:YES];
 //    UITabBarController *vc = (UITabBarController*)self.window.rootViewController;
 //    vc.selectedIndex = 1;
+    
+    
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:k_APP_GROUP_KEY];
+    
+    [shared setObject:@"testDemoContainer" forKey:@"testDemoContainer"];
+    [shared synchronize];
     return YES;
 }
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
