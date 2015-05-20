@@ -75,12 +75,14 @@
 
 - (void)saveTextByNSUserDefaults
 {
+     NSLog(@"saveTextByNSUserDefaults 混淆: %s",__FUNCTION__);
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.testDemoContainer"];
     
     [shared setValue:_textField.text forKey:@"testDemoContainer"];
     [shared synchronize];
 }
 -(void)changeImage{
+     NSLog(@"changeImage 混淆: %s",__FUNCTION__);
     if (_imgBool){
         _iamge.image= nil;
         _iamge.image =[UIImage imageNamed:@"sns_icon_1"];

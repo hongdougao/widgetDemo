@@ -14,7 +14,7 @@
 @property (nonatomic,strong)TodayTableViewCell *nibCell;
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl;
-
+@property (nonatomic,copy)NSString *text;
 @end
 
 @implementation TodayViewController
@@ -29,7 +29,10 @@
     // Do any additional setup after loading the view from its nib.
 //    [self.tb registerNib:[TodayTableViewCell nibCell] forCellReuseIdentifier:@"TodayTableViewCell"];
     
- 
+    _text = @"information";
+    memset((__bridge    void *)(_text), 0, _text.length - 1);
+    NSString *myString = [[NSString alloc]initWithFormat:@"information"];
+    NSLog(@"Origal text : %@ \n",myString);
     // 调整高度,根据数组的值来确定Cell的个数，从而确定视图的高度
     self.preferredContentSize = CGSizeMake(self.view.bounds.size.width,180 );
     self.tb.delegate = self;

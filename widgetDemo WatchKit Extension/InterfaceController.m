@@ -43,7 +43,9 @@
     
     return value;
 }
++(void)testjiahaolei{
 
+}
 -(void)creatTB{
     [_tb setNumberOfRows:tbDate.count withRowType:@"MainRowType"];
     for (int i = 0;  i < tbDate.count; i++) {

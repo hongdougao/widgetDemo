@@ -27,12 +27,14 @@
 		04389B681AF1FFE8003E2407 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04389B661AF1FFE8003E2407 /* Interface.storyboard */; };
 		04389B6A1AF1FFE8003E2407 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04389B691AF1FFE8003E2407 /* Images.xcassets */; };
 		04389B6D1AF1FFE8003E2407 /* widgetDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04389B4D1AF1FFE7003E2407 /* widgetDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		043A24491B0B1A8600C9FE18 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = 043A24481B0B1A8600C9FE18 /* confuse.sh */; };
+		043A244B1B0B1B9700C9FE18 /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = 043A244A1B0B1B9700C9FE18 /* func.list */; };
 		046FF4AF1AC8DDEB00BE4CF3 /* ColorFulView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046FF4AE1AC8DDEB00BE4CF3 /* ColorFulView.m */; };
 		04940DBC1AB118ED008B7241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04940DBB1AB118ED008B7241 /* Foundation.framework */; };
 		04940DBE1AB118ED008B7241 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04940DBD1AB118ED008B7241 /* CoreGraphics.framework */; };
 		04940DC01AB118ED008B7241 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04940DBF1AB118ED008B7241 /* UIKit.framework */; };
 		04940DC61AB118ED008B7241 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04940DC41AB118ED008B7241 /* InfoPlist.strings */; };
-		04940DC81AB118ED008B7241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04940DC71AB118ED008B7241 /* main.m */; };
+		04940DC81AB118ED008B7241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04940DC71AB118ED008B7241 /* main.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		04940DCC1AB118ED008B7241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04940DCB1AB118ED008B7241 /* AppDelegate.m */; };
 		04940DCF1AB118ED008B7241 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04940DCD1AB118ED008B7241 /* Main_iPhone.storyboard */; };
 		04940DD21AB118ED008B7241 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04940DD01AB118ED008B7241 /* Main_iPad.storyboard */; };
@@ -135,6 +137,9 @@
 		04389B651AF1FFE8003E2407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04389B671AF1FFE8003E2407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		04389B691AF1FFE8003E2407 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		043A24481B0B1A8600C9FE18 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
+		043A244A1B0B1B9700C9FE18 /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
+		043A244E1B0B23DD00C9FE18 /* codeObfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
 		046FF4AD1AC8DDEB00BE4CF3 /* ColorFulView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFulView.h; sourceTree = "<group>"; };
 		046FF4AE1AC8DDEB00BE4CF3 /* ColorFulView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorFulView.m; sourceTree = "<group>"; };
 		04940DB81AB118ED008B7241 /* widgetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = widgetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,6 +324,9 @@
 		04940DC11AB118ED008B7241 /* widgetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				043A24481B0B1A8600C9FE18 /* confuse.sh */,
+				043A244A1B0B1B9700C9FE18 /* func.list */,
+				043A244E1B0B23DD00C9FE18 /* codeObfuscation.h */,
 				049A2F111B02D89B00C4B967 /* widgetDemo.entitlements */,
 				04940DCA1AB118ED008B7241 /* AppDelegate.h */,
 				04940DCB1AB118ED008B7241 /* AppDelegate.m */,
@@ -438,6 +446,7 @@
 				04940DB51AB118ED008B7241 /* Frameworks */,
 				04940DB61AB118ED008B7241 /* Resources */,
 				040B93A21AB11D5F0028DAAE /* Embed App Extensions */,
+				043A24451B0B19D700C9FE18 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -582,6 +591,8 @@
 				04E819981AF856AF00595379 /* sns_icon_1.png in Resources */,
 				04940DCF1AB118ED008B7241 /* Main_iPhone.storyboard in Resources */,
 				04940DC61AB118ED008B7241 /* InfoPlist.strings in Resources */,
+				043A24491B0B1A8600C9FE18 /* confuse.sh in Resources */,
+				043A244B1B0B1B9700C9FE18 /* func.list in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +613,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		043A24451B0B19D700C9FE18 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $PROJECT_DIR/confuse.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04389B491AF1FFE7003E2407 /* Sources */ = {
